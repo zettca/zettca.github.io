@@ -1,0 +1,16 @@
+.section {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.section:nth-child( 3n) {
+  background: #999;
+}
+
+.section:nth-child( 3n + 1) {
+  background: #069;
+}
+
+.section:nth-child( 3n + 2) {
+  background: #696;
+}
