@@ -7,10 +7,12 @@ class DotsNavigation extends React.PureComponent {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const ref = this.getAttribute('href');
+        document.querySelector(ref).scrollIntoView({
           block: 'start',
           behavior: 'smooth'
         });
+        window.history.pushState('', '', ref);
       });
     });
   }
