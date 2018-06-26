@@ -8,7 +8,7 @@ class IdCard extends React.PureComponent {
       <div id="idCard" className="card">
         <div>
           <div className="portrait">
-            <img width="128" height="128" src="https://avatars2.githubusercontent.com/u/638946?s=460&v=4" alt="portrait" />
+            <img width="128" height="128" src="https://avatars2.githubusercontent.com/u/638946" alt="portrait" />
           </div>
           <div className="idCard-content">
             <div className="separator">
@@ -18,7 +18,6 @@ class IdCard extends React.PureComponent {
             <div className="separator">
               <strong>
                 <div>Full-Stack Developer</div>
-                <div>Front-End Developer</div>
               </strong>
             </div>
             <div className="separator">

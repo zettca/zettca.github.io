@@ -51,13 +51,24 @@ class App extends React.Component {
 
     return (
       <div>
-        <DotsNavigation elements={['landing', 'timeline', 'projects', 'hobbies', 'contact']} index={navIndex} />
+        <DotsNavigation elements={['landing', 'projects', 'timeline', 'hobbies', 'contact']} index={navIndex} />
         <main>
+          <p style={{ textAlign: 'center' }}>
+            <div>* still under construction *</div>
+            <div>pls no judge desu</div>
+            <div>arigatou</div>
+          </p>
           <Section name="Landing">
             <div>
               <IdCard />
             </div>
+            <div>
+              <div className="card">
+                <span>*stalk locations*</span>
+              </div>
+            </div>
           </Section>
+          <Section name="Projects"></Section>
           <Section name="Timeline">
             <VerticalTimeline>
               <VerticalTimelineElement
@@ -133,7 +144,6 @@ class App extends React.Component {
                 iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }} />
             </VerticalTimeline>
           </Section>
-          <Section name="Projects"></Section>
           <Section name="Hobbies"></Section>
           <Section name="Contact"></Section>
         </main>
