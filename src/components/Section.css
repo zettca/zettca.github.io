@@ -1,16 +1,15 @@
 .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   min-height: 100vh;
 }
 
-.section:nth-child( 3n) {
-  background: #999;
+.section:nth-child(2n) {
+  background: #EEE;
 }
 
-.section:nth-child( 3n + 1) {
-  background: #069;
-}
-
-.section:nth-child( 3n + 2) {
-  background: #696;
+.section:nth-child(2n + 1) {
+  background: #FAFAFA;
 }

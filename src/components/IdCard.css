@@ -1,0 +1,35 @@
+#idCard {
+  display: inline-block;
+  padding: 0 2rem 1rem;
+  margin-top: 64px;
+}
+
+#idCard>div {
+  position: relative;
+  top: -64px;
+  margin-bottom: -64px;
+}
+
+.portrait {
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px #666;
+}
+
+.separator {
+  margin-bottom: 1rem;
+}
+
+.no-separator {
+  margin-bottom: 0;
+}
+
+.card {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px #666;
+}

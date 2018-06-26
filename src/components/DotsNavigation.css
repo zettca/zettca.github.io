@@ -1,25 +1,38 @@
 .navigation {
   position: fixed;
+  margin: 0 1rem;
   right: 0;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translateY(-50%);
+  z-index: 99;
 }
 
-.navigation ul {
-  list-style-type: none;
-  margin: 0 1rem;
-  padding: 0;
+.nav-element {
+  display: block;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
 }
 
-.nav-element>a {
-  cursor: poainter;
-  display: inline-block;
-  border: 2px solid #FFF;
+.nav-element>div {
+  border: 2px solid #333;
   border-radius: 50%;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
-.nav-element a:hover, .nav-element a.active {
-  background-color: #FFF;
+.nav-text {
+  color: transparent;
+  position: relative;
+  top: -0.4rem;
+  left: -3.2rem;
+}
+
+.nav-element>div:hover, .nav-element>div.active {
+  background-color: #333;
+}
+
+.nav-element>div:hover .nav-text {
+  color: #333;
+  transition: 0.2s ease-in;
+  left: -4rem;
 }

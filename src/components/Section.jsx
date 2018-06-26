@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Section.css';
 
 class Section extends React.PureComponent {
@@ -16,5 +17,10 @@ class Section extends React.PureComponent {
     );
   }
 }
+
+Section.propTypes = {
+  name: PropTypes.string,
+  children: PropTypes.element,
+};
 
 export default Section;

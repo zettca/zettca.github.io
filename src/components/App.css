@@ -7,6 +7,10 @@ a, a:active, a:focus {
   outline: none;
 }
 
+.gray {
+  color: #777;
+}
+
 .title {
   display: block;
   text-align: center;
@@ -16,39 +20,4 @@ a, a:active, a:focus {
 .title>a {
   display: inline-block;
   padding: 0.8rem;
-}
-
-.round {
-  overflow: hidden;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-#idCard {
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin: 1rem;
-}
-
-#idCard>div {
-  display: inline-block;
-}
-
-.portrait {
-  overflow: hidden;
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-}
-
-.portrait>img {
-  width: 128px;
-  height: 128px;
-}
-
-.card {
-  display: inline-block;
-  background-color: rgba(240, 240, 240, 0.8);
-  border-radius: 2px;
-  box-shadow: 1px 1px 4px #666;
 }

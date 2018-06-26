@@ -8,11 +8,14 @@ class DotsNavigation extends React.PureComponent {
         e.preventDefault();
 
         const ref = this.getAttribute('href');
-        document.querySelector(ref).scrollIntoView({
-          block: 'start',
-          behavior: 'smooth'
-        });
-        window.history.pushState('', '', ref);
+        const refElement = document.querySelector(ref);
+        if (refElement) {
+          refElement.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+          });
+          window.history.pushState('', '', ref);
+        }
       });
     });
   }
@@ -22,12 +25,13 @@ class DotsNavigation extends React.PureComponent {
 
     return (
       <nav className='navigation'>
-        <ul>
-          {elements.map((el, i) => (
-            <li key={el} className='nav-element'>
-              <a className={(i === index) ? 'active' : ''} href={`#${el}`} />
-            </li>))}
-        </ul>
+        {elements.map((el, i) => (
+          <a key={el} className='nav-element' href={`#${el}`}>
+            <div className={(i === index) ? 'active' : ''}>
+              <span className='nav-text'>{el}</span>
+            </div>
+          </a>
+        ))}
       </nav>
     );
   }
