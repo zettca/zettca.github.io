@@ -14,7 +14,7 @@
 }
 
 .nav-element>div {
-  border: 2px solid #333;
+  border: 2px solid #666;
   border-radius: 50%;
   width: 0.5rem;
   height: 0.5rem;
@@ -28,11 +28,11 @@
 }
 
 .nav-element>div:hover, .nav-element>div.active {
-  background-color: #333;
+  background-color: #666;
 }
 
 .nav-element>div:hover .nav-text {
-  color: #333;
+  color: #666;
   transition: 0.2s ease-in;
   left: -4rem;
 }

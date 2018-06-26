@@ -8,9 +8,9 @@ class Section extends React.PureComponent {
     const nameLower = name.toLowerCase();
 
     return (
-      <section className={'section'}>
+      <section id={nameLower} className={'section'}>
         <div className='title'>
-          <a id={nameLower} href={'#' + nameLower}>{name}</a>
+          <a href={'#' + nameLower}>{name}</a>
         </div>
         {children}
       </section>

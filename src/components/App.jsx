@@ -62,8 +62,7 @@ class App extends React.Component {
             <VerticalTimeline>
               <VerticalTimelineElement
                 date="Movember 2018"
-                className="vertical-timeline-element--work"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}>
+                iconStyle={{ background: 'silver' }}>
                 <h2 className="vertical-timeline-element-title">Something Something</h2>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="">CompanyXPTO</a>
@@ -72,7 +71,6 @@ class App extends React.Component {
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 date="2017 - present"
-                className="vertical-timeline-element--education"
                 iconStyle={istStyle}>
                 <h2 className="vertical-timeline-element-title">MSc in Computer Science and Engineering</h2>
                 <h4 className="vertical-timeline-element-subtitle gray">
@@ -82,7 +80,6 @@ class App extends React.Component {
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 date="2013 - 2017"
-                className="vertical-timeline-element--education"
                 iconStyle={istStyle}>
                 <h2 className="vertical-timeline-element-title">BSc in Computer Science and Engineering</h2>
                 <h4 className="vertical-timeline-element-subtitle gray">
@@ -92,7 +89,6 @@ class App extends React.Component {
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 date="2013"
-                className="vertical-timeline-element--work"
                 iconStyle={esjmStyle}>
                 <h2 className="vertical-timeline-element-title">Front-End Developer Internship</h2>
                 <h4 className="vertical-timeline-element-subtitle gray">
@@ -104,7 +100,6 @@ class App extends React.Component {
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 date="2010 - 2013"
-                className="vertical-timeline-element--education"
                 iconStyle={esjmStyle}>
                 <h2 className="vertical-timeline-element-title">IT Technician</h2>
                 <h4 className="vertical-timeline-element-subtitle gray">

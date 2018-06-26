@@ -1,6 +1,4 @@
 import React from 'react';
-import profilePhoto from '../img/profile.jpg';
-
 import './IdCard.css';
 
 class IdCard extends React.PureComponent {
@@ -10,12 +8,12 @@ class IdCard extends React.PureComponent {
       <div id="idCard" className="card">
         <div>
           <div className="portrait">
-            <img width="128" height="128" src={profilePhoto} alt="portrait" />
+            <img width="128" height="128" src="https://avatars2.githubusercontent.com/u/638946?s=460&v=4" alt="portrait" />
           </div>
           <div className="idCard-content">
             <div className="separator">
               <h3 className="no-separator">Bruno Henriques</h3>
-              <div>zettca</div>
+              <div><a href="https://github.com/zettca">zettca</a></div>
             </div>
             <div className="separator">
               <strong>
@@ -31,7 +29,7 @@ class IdCard extends React.PureComponent {
               <span>JavaScript • Java • Python • C • C#</span>
             </div>
             <div className="separator">
-              <span>~ stuffies ~</span>
+              <span>~~~ stuffies ~~~</span>
             </div>
           </div>
         </div>
