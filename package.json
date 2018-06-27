@@ -6,6 +6,7 @@
     "gh-pages": "^1.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-inlinesvg": "^0.8.1",
     "react-scripts": "1.1.4",
     "react-vertical-timeline-component": "^2.1.2"
   },

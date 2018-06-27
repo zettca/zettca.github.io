@@ -2,14 +2,18 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import './App.css';
-import istLogo from '../img/logo/ist.png';
-import pfLogo from '../img/logo/playfun.png';
-import trLogo from '../img/logo/tr.png';
-import esjmLogo from '../img/logo/esjm.png';
 import DotsNavigation from './DotsNavigation';
+import SocialContact from './SocialContact';
+import SocialIcon from './SocialIcon';
 import Section from './Section';
 import IdCard from './IdCard';
+import './App.css';
+
+const images = {};
+['ist.png', 'playfun.png', 'tr.png', 'esjm.png'].forEach((imgName) => {
+  const key = imgName.slice(0, imgName.indexOf('.'));
+  images[key] = require('../res/img/' + imgName);
+});
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +33,7 @@ class App extends React.Component {
   }
 
   handleScroll(event) {
+    // TODO: this may be slow, optimize
     const { navIndex } = this.state;
     const { scrollY } = event.currentTarget;
     const sections = document.querySelectorAll('section');
@@ -44,37 +49,55 @@ class App extends React.Component {
   render() {
     const { navIndex } = this.state;
 
-    const istStyle = { background: `url(${istLogo}) no-repeat center/90% #009DE0` };
-    const esjmStyle = { background: `url(${esjmLogo}) no-repeat center/90% #CCCCCC` };
-    const pfStyle = { background: `url(${pfLogo}) no-repeat center/70% #304050` };
-    const trStyle = { background: `url(${trLogo}) no-repeat center/90% #111111` };
+    const istStyle = { background: `url(${images.ist}) no-repeat center/90% #009DE0` };
+    const esjmStyle = { background: `url(${images.esjm}) no-repeat center/90% #CCCCCC` };
+    const pfStyle = { background: `url(${images.playfun}) no-repeat center/60% #304050` };
+    const trStyle = { background: `url(${images.tr}) no-repeat center/90% #111111` };
 
     return (
       <div>
         <DotsNavigation elements={['landing', 'projects', 'timeline', 'hobbies', 'contact']} index={navIndex} />
         <main>
-          <p style={{ textAlign: 'center' }}>
+          <Section name="Disclaimer">
             <div>* still under construction *</div>
             <div>pls no judge desu</div>
             <div>arigatou</div>
-          </p>
+          </Section>
           <Section name="Landing">
-            <div>
+            <div className="flex-element">
               <IdCard />
             </div>
-            <div>
-              <div className="card">
-                <span>*stalk locations*</span>
+            <div className="flex-element">
+              <div className="card social-icons">
+                <SocialIcon fill="#3B5998" name="facebook" url="https://www.facebook.com/zettca" />
+                <SocialIcon fill="#0077B5" name="linkedin" url="https://www.linkedin.com/in/zettca/" />
+                <SocialIcon fill="#E4405F" name="instagram" url="https://www.instagram.com/zettca/" />
+                <SocialIcon fill="#181717" name="github" url="https://github.com/zettca" />
+                <SocialIcon fill="#1DA1F2" name="twitter" url="https://twitter.com/zettca" />
+              </div>
+            </div>
+            <div className="flex-element">
+              <div className="card social-contacts">
+                <SocialContact fill="#2CA5E0" name="telegram" text="zettca" url="https://telegram.me/zettca" />
+                <SocialContact fill="#0084FF" name="messenger" text="zettca" url="https://www.messenger.com/t/zettca" />
+                <SocialContact fill="#7289DA" name="discord" text="zettca#3742" url="" />
+                <SocialContact fill="#00AFF0" name="skype" text="sael-corruption" url="" />
+                <SocialContact fill="#D14836" name="gmail" text="bruno@zettca.xyz" url="mailto:bruno@zettca.xyz" />
+                {/*<SocialContact fill="#8B89CC" name="protonmail" text="zettca@protonmail.com" url="mailto:zettca@protonmail.com" />*/}
               </div>
             </div>
           </Section>
-          <Section name="Projects"></Section>
+          <Section name="About">
+            <p>JavaScript is love</p>
+            <p>Trail is life</p>
+            <p>Cenas</p>
+          </Section>
           <Section name="Timeline">
-            <VerticalTimeline>
+            <VerticalTimeline animate={false}>
               <VerticalTimelineElement
-                date="Movember 2018"
+                date="Movember 2021"
                 iconStyle={{ background: 'silver' }}>
-                <h2 className="vertical-timeline-element-title">Something Something</h2>
+                <h3 className="vertical-timeline-element-title">Something Something</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="">CompanyXPTO</a>
                 </h4>
@@ -83,16 +106,16 @@ class App extends React.Component {
               <VerticalTimelineElement
                 date="2017 - present"
                 iconStyle={istStyle}>
-                <h2 className="vertical-timeline-element-title">MSc in Computer Science and Engineering</h2>
+                <h3 className="vertical-timeline-element-title">MSc in Computer Science and Engineering</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
-                  <a href="">Instituto Superior Técnico</a>
+                  <a href="https://tecnico.ulisboa.pt/">Instituto Superior Técnico</a>
                 </h4>
                 <p>Distributed Systems, Cyber-Security</p>
               </VerticalTimelineElement>
               <VerticalTimelineElement
                 date="2013 - 2017"
                 iconStyle={istStyle}>
-                <h2 className="vertical-timeline-element-title">BSc in Computer Science and Engineering</h2>
+                <h3 className="vertical-timeline-element-title">BSc in Computer Science and Engineering</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="https://tecnico.ulisboa.pt/">Instituto Superior Técnico</a>
                 </h4>
@@ -101,7 +124,7 @@ class App extends React.Component {
               <VerticalTimelineElement
                 date="2013"
                 iconStyle={esjmStyle}>
-                <h2 className="vertical-timeline-element-title">Front-End Developer Internship</h2>
+                <h3 className="vertical-timeline-element-title">Front-End Developer Internship</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="http://www.expedita.com/">Expedita Lda.</a>
                 </h4>
@@ -112,7 +135,7 @@ class App extends React.Component {
               <VerticalTimelineElement
                 date="2010 - 2013"
                 iconStyle={esjmStyle}>
-                <h2 className="vertical-timeline-element-title">IT Technician</h2>
+                <h3 className="vertical-timeline-element-title">IT Technician</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="https://www.jaimemoniz.com/">Escola Secundária Jaime Moniz</a>
                 </h4>
@@ -121,7 +144,7 @@ class App extends React.Component {
               <VerticalTimelineElement
                 date="2011 - present"
                 iconStyle={pfStyle}>
-                <h2 className="vertical-timeline-element-title">Community Management</h2>
+                <h3 className="vertical-timeline-element-title">Community Management</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <a href="https://playfun.pt/">PlayFun Gaming community</a>
                 </h4>
@@ -130,7 +153,7 @@ class App extends React.Component {
               <VerticalTimelineElement
                 date="2007 - 2010"
                 iconStyle={trStyle}>
-                <h2 className="vertical-timeline-element-title">Community Management</h2>
+                <h3 className="vertical-timeline-element-title">Community Management</h3>
                 <h4 className="vertical-timeline-element-subtitle gray">
                   <span>
                     <a href="http://s1.zetaboards.com/Tugas_Revolution/">Tugas Revolution</a>
@@ -144,7 +167,7 @@ class App extends React.Component {
                 iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }} />
             </VerticalTimeline>
           </Section>
-          <Section name="Hobbies"></Section>
+          <Section name="Projects"></Section>
           <Section name="Contact"></Section>
         </main>
       </div>

@@ -21,14 +21,20 @@ class IdCard extends React.PureComponent {
               </strong>
             </div>
             <div className="separator">
+              <span>~~~ ~~~ ~~~</span>
+            </div>
+            <div className="separator">
               <div>Cyber-Security</div>
               <div>Distributed Systems</div>
+            </div>
+            <div className="separator">
+              <span>~~~ ~~~ ~~~</span>
             </div>
             <div className="separator">
               <span>JavaScript • Java • Python • C • C#</span>
             </div>
             <div className="separator">
-              <span>~~~ stuffies ~~~</span>
+              <span>~~~ ~~~ ~~~</span>
             </div>
           </div>
         </div>

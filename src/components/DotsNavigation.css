@@ -1,6 +1,6 @@
 .navigation {
   position: fixed;
-  margin: 0 1rem;
+  margin: 0 0.6rem;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -9,7 +9,7 @@
 
 .nav-element {
   display: block;
-  margin: 0.4rem 0;
+  padding: 0.2rem 0;
   font-size: 0.9rem;
 }
 
@@ -21,10 +21,12 @@
 }
 
 .nav-text {
+  float: right;
   color: transparent;
   position: relative;
-  top: -0.4rem;
-  left: -3.2rem;
+  top: -100%;
+  left: -0.4rem;
+  height: inherit;
 }
 
 .nav-element>div:hover, .nav-element>div.active {
@@ -34,5 +36,5 @@
 .nav-element>div:hover .nav-text {
   color: #666;
   transition: 0.2s ease-in;
-  left: -4rem;
+  left: -1rem;
 }
