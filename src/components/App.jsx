@@ -89,7 +89,6 @@ class App extends React.Component {
               <SocialContact fill="#7289DA" name="discord" text="zettca#3742" url="" />
               <SocialContact fill="#00AFF0" name="skype" text="sael-corruption" url="" />
               <SocialContact fill="#D14836" name="gmail" text="bruno@zettca.xyz" url="mailto:bruno@zettca.xyz" />
-              {/*<SocialContact fill="#8B89CC" name="protonmail" text="zettca@protonmail.com" url="mailto:zettca@protonmail.com" />*/}
             </div>
           </Section>
         </main>
