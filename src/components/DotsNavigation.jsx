@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './DotsNavigation.css';
 
 class DotsNavigation extends React.Component {
@@ -11,7 +13,7 @@ class DotsNavigation extends React.Component {
 
   componentDidMount() {
     const elsArray = [].slice.call(document.querySelectorAll('.section'));
-    const sectionNames = elsArray.map(el => el.getAttribute('name').toLowerCase());
+    const sectionNames = elsArray.map(el => el.getAttribute('name'));
     this.setState({ sectionNames });
   }
 
@@ -21,10 +23,10 @@ class DotsNavigation extends React.Component {
 
     return (
       <nav className='navigation'>
-        {sectionNames.map((el, i) => (
-          <a key={el} className='nav-element' href={`#${el}`}>
+        {sectionNames.map((name, i) => (
+          <a key={name} className='nav-element' href={`#${name.toLowerCase()}`}>
             <div className={(i === index) ? 'active' : ''}>
-              <span className='nav-text'>{el}</span>
+              <span className='nav-text'>{name}</span>
             </div>
           </a>
         ))}
@@ -32,5 +34,9 @@ class DotsNavigation extends React.Component {
     );
   }
 }
+
+DotsNavigation.propTypes = {
+  index: PropTypes.number,
+};
 
 export default DotsNavigation;

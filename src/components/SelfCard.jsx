@@ -1,7 +1,9 @@
 import React from 'react';
-import './IdCard.css';
+import './SelfCard.css';
 
-class IdCard extends React.PureComponent {
+import SocialIcon from './SocialIcon';
+
+class SelfCard extends React.PureComponent {
   render() {
 
     return (
@@ -21,20 +23,18 @@ class IdCard extends React.PureComponent {
               </strong>
             </div>
             <div className="separator">
-              <span>~~~ ~~~ ~~~</span>
-            </div>
-            <div className="separator">
               <div>Cyber-Security</div>
               <div>Distributed Systems</div>
             </div>
             <div className="separator">
-              <span>~~~ ~~~ ~~~</span>
-            </div>
-            <div className="separator">
               <span>JavaScript • Java • Python • C • C#</span>
             </div>
-            <div className="separator">
-              <span>~~~ ~~~ ~~~</span>
+            <div className="social-icons">
+              <SocialIcon fill="#3B5998" name="facebook" url="https://www.facebook.com/zettca" />
+              <SocialIcon fill="#0077B5" name="linkedin" url="https://www.linkedin.com/in/zettca/" />
+              <SocialIcon fill="#E4405F" name="instagram" url="https://www.instagram.com/zettca/" />
+              <SocialIcon fill="#181717" name="github" url="https://github.com/zettca" />
+              <SocialIcon fill="#1DA1F2" name="twitter" url="https://twitter.com/zettca" />
             </div>
           </div>
         </div>
@@ -44,4 +44,4 @@ class IdCard extends React.PureComponent {
 }
 
 
-export default IdCard;
+export default SelfCard;

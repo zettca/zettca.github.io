@@ -15,7 +15,7 @@ a, a:active, a:focus {
   margin-bottom: 0;
 }
 
-.flex-vertical {
+.flex-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,11 +23,15 @@ a, a:active, a:focus {
 
 .flex-element {
   flex: 1;
+  align-self: center;
+}
+
+.full {
+  min-height: 100vh;
 }
 
 .section {
   text-align: center;
-  min-height: 100vh;
 }
 
 .section:nth-child(2n) {
@@ -49,7 +53,7 @@ a, a:active, a:focus {
 }
 
 .title>a {
-  display: inline-block;
+  display: block;
   padding: 0.8rem;
 }
 
@@ -78,6 +82,8 @@ a, a:active, a:focus {
 
 .social-icons {
   height: 32px;
+  padding: 1rem 0 0;
+  border-top: 1px dashed #999;
 }
 
 .social-icons .icon {
@@ -86,6 +92,7 @@ a, a:active, a:focus {
 
 .social-contacts {
   text-align: left;
+  padding-right: 6rem;
 }
 
 .social-contacts .icon {

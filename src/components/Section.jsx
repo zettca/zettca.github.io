@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 
 class Section extends React.PureComponent {
   render() {
-    const { name, children } = this.props;
+    const { name, children, className } = this.props;
     const nameLower = name.toLowerCase();
+    const useTitle = true;
 
     return (
-      <section id={nameLower} name={name} className={'section flex-vertical'}>
+      <section id={nameLower} name={name} className={`section ${className}`}>
         <div className='title'>
-          <a href={'#' + nameLower}>{name}</a>
+          {useTitle && <a href={'#' + nameLower}>{name}</a>}
         </div>
-        <div>
+        <div className="flex-center">
           {children}
         </div>
       </section>
@@ -21,6 +22,7 @@ class Section extends React.PureComponent {
 
 Section.propTypes = {
   name: PropTypes.string,
+  className: PropTypes.string,
   children: PropTypes.element,
 };
 
