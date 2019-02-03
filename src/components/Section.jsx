@@ -5,7 +5,7 @@ class Section extends React.PureComponent {
   render() {
     const { name, children, className } = this.props;
     const nameLower = name.toLowerCase();
-    const useTitle = true;
+    const useTitle = false;
 
     return (
       <section id={nameLower} name={name} className={`section ${className}`}>

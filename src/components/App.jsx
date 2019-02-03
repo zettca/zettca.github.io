@@ -46,9 +46,9 @@ class App extends React.Component {
         <DotsNavigation index={navIndex} />
         <main>
           <Section name="Disclaimer">
-            <div>* still under construction *</div>
-            <div>pls no judge desu</div>
-            <div>arigatou</div>
+            <div>* websiterino still under construction *</div>
+            <div>pls no judge です</div>
+            <div>ありがとうございます</div>
           </Section>
           <Section name="Landing" className="full flex-center">
             <div className="flex-element">
