@@ -10,7 +10,7 @@ class Section extends React.PureComponent {
     return (
       <section id={nameLower} name={name} className={`section ${className}`}>
         <div className='title'>
-          {useTitle && <a href={'#' + nameLower}>{name}</a>}
+          <a href={'#' + nameLower}>{useTitle && name}</a>
         </div>
         <div className="flex-center">
           {children}
@@ -23,7 +23,7 @@ class Section extends React.PureComponent {
 Section.propTypes = {
   name: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 export default Section;

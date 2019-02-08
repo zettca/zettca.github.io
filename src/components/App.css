@@ -7,14 +7,6 @@ a, a:active, a:focus {
   outline: none;
 }
 
-.separator {
-  margin-bottom: 1rem;
-}
-
-.no-separator {
-  margin-bottom: 0;
-}
-
 .flex-center {
   display: flex;
   flex-direction: column;
@@ -78,16 +70,6 @@ a, a:active, a:focus {
 .icon-32 {
   width: 32px;
   height: 32px;
-}
-
-.social-icons {
-  height: 32px;
-  padding: 1rem 0 0;
-  border-top: 1px dashed #999;
-}
-
-.social-icons .icon {
-  margin: 0 6px;
 }
 
 .social-contacts {

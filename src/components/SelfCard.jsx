@@ -14,25 +14,24 @@ class SelfCard extends React.PureComponent {
           </div>
           <div className="idCard-content">
             <div className="separator">
-              <h3 className="no-separator">Bruno Henriques</h3>
-              <div><a href="https://github.com/zettca">zettca</a></div>
+              <h1 className="no-separator">Bruno Henriques</h1>
+              <div>
+                <a href="https://github.com/zettca">zettca</a>
+              </div>
             </div>
             <div className="separator">
-              <strong>
-                <div>Full-Stack Developer</div>
-              </strong>
-            </div>
-            <div className="separator">
-              <div>Cyber-Security</div>
+              <div>UI • UX</div>
+              <div>Cybersecurity</div>
               <div>Distributed Systems</div>
             </div>
             <div className="separator">
-              <span>JavaScript • Java • Python • C • C#</span>
+              <span>JavaScript • Java • Python</span>
             </div>
-            <div className="social-icons">
-              <SocialIcon fill="#3B5998" name="facebook" url="https://www.facebook.com/zettca" />
-              <SocialIcon fill="#0077B5" name="linkedin" url="https://www.linkedin.com/in/zettca/" />
-              <SocialIcon fill="#E4405F" name="instagram" url="https://www.instagram.com/zettca/" />
+            <div className="separator dots"></div>
+            <div className="separator social-icons">
+              <SocialIcon fill="#3B5998" name="facebook" url="https://facebook.com/zettca" />
+              <SocialIcon fill="#0077B5" name="linkedin" url="https://linkedin.com/in/zettca/" />
+              <SocialIcon fill="#E4405F" name="instagram" url="https://instagram.com/zettca/" />
               <SocialIcon fill="#181717" name="github" url="https://github.com/zettca" />
               <SocialIcon fill="#1DA1F2" name="twitter" url="https://twitter.com/zettca" />
             </div>
@@ -42,6 +41,5 @@ class SelfCard extends React.PureComponent {
     );
   }
 }
-
 
 export default SelfCard;

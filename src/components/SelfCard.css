@@ -1,20 +1,42 @@
 #idCard {
+  --image-size: 128px;
+  --offset: calc(var(--image-size) / 2);
   display: inline-block;
   padding: 0 2rem 1rem;
-  margin-top: 64px;
+  margin-top: var(--offset);
 }
 
 #idCard>div {
   position: relative;
-  top: -64px;
-  margin-bottom: -64px;
+  top: calc(-1 * var(--offset));
+  margin-bottom: calc(-1 * var(--offset));
 }
 
 .portrait {
   overflow: hidden;
   margin: 0 auto 1rem;
-  width: 128px;
-  height: 128px;
+  width: var(--image-size);
+  height: var(--image-size);
   border-radius: 50%;
   box-shadow: 1px 1px 4px #666;
+}
+
+.separator {
+  margin-bottom: 1rem;
+}
+
+.no-separator {
+  margin-bottom: 0;
+}
+
+.dots {
+  border-top: 1px dashed #999;
+}
+
+.social-icons {
+  height: 32px;
+}
+
+.social-icons .icon {
+  margin: 0 6px;
 }
