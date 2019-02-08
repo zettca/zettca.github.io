@@ -10,7 +10,7 @@ class Section extends React.PureComponent {
     return (
       <section id={nameLower} name={name} className={`section ${className}`}>
         <div className='title'>
-          <a href={'#' + nameLower}>{useTitle && name}</a>
+          {useTitle && <a href={'#' + nameLower}>{name}</a>}
         </div>
         <div className="flex-center">
           {children}
