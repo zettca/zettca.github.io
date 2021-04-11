@@ -3,22 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.2.0",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-inlinesvg": "^0.8.1",
-    "react-scripts": "1.1.4",
-    "react-vertical-timeline-component": "^2.1.2"
+    "svelte-inline-svg": "^1.0.8"
   },
   "devDependencies": {
-    "@types/react": "^16.3.17"
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-svelte": "^3.5.0",
+    "gh-pages": "^3.1.0",
+    "snowpack": "^3.0.1",
+    "svelte": "^3.24.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "snowpack dev",
+    "build": "snowpack build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist build --branch master"
+    "deploy": "gh-pages --dist build --branch gh-pages"
   }
 }
