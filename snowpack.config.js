@@ -6,10 +6,7 @@ module.exports = {
   },
   exclude: ["CNAME"],
   plugins: ["@snowpack/plugin-svelte", "@snowpack/plugin-dotenv"],
-  routes: [
-    /* Example: Enable an SPA Fallback in development: */
-    // {"match": "routes", "src": ".*", "dest": "/index.html"},
-  ],
+  routes: [],
   optimize: {
     bundle: true,
     minify: true,

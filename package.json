@@ -15,7 +15,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages --dist build --branch gh-pages"
   }
 }
