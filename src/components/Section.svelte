@@ -1,10 +1,10 @@
 <script>
-  export let name;
-  export let full = false;
-  export let center = false;
-  export let showTitle = false;
+export let name;
+export let full = false;
+export let center = false;
+export let showTitle = false;
 
-  const id = name.toLowerCase();
+const id = name.toLowerCase();
 </script>
 
 <section {id} {name} class:full class:center>
@@ -20,25 +20,25 @@
 </section>
 
 <style>
-  section {
-    text-align: center;
-  }
+section {
+  text-align: center;
+}
 
-  section:nth-child(2n) {
-    background: var(--bg1);
-  }
+section:nth-child(2n) {
+  background: var(--bg1);
+}
 
-  section:nth-child(2n + 1) {
-    background: var(--bg2);
-  }
+section:nth-child(2n + 1) {
+  background: var(--bg2);
+}
 
-  .full {
-    min-height: 100vh;
-  }
+.full {
+  min-height: 100vh;
+}
 
-  .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 </style>

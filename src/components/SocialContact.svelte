@@ -1,10 +1,10 @@
 <script>
-  import SVG from "svelte-inline-svg";
+import SVG from "svelte-inline-svg";
 
-  export let name;
-  export let url;
-  export let fill;
-  export let text;
+export let name;
+export let url;
+export let fill;
+export let text;
 </script>
 
 <div class="contact">
@@ -15,20 +15,20 @@
 </div>
 
 <style>
-  .contact {
-    display: flex;
-    align-items: center;
-  }
-  .icon {
-    margin-right: 6px;
-    width: 24px;
-    height: 24px;
-  }
-  .text {
-    font-family: "Lucida Console", "Monaco", monospace;
-  }
+.contact {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  margin-right: 6px;
+  width: 24px;
+  height: 24px;
+}
+.text {
+  font-family: "Lucida Console", "Monaco", monospace;
+}
 
-  a {
-    text-decoration: initial;
-  }
+a {
+  text-decoration: initial;
+}
 </style>
