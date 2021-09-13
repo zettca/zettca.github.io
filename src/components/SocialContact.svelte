@@ -8,7 +8,7 @@
 </script>
 
 <div class="contact">
-  <span class="icon-box">
+  <span class="icon">
     <SVG style="fill: {fill}" src="/img/svg/{name}.svg" />
   </span>
   <a href={url || null} class="text">{text}</a>
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
   }
-  .icon-box {
+  .icon {
     margin-right: 6px;
     width: 24px;
     height: 24px;

@@ -25,11 +25,11 @@
   }
 
   section:nth-child(2n) {
-    background: #eee;
+    background: var(--bg1);
   }
 
   section:nth-child(2n + 1) {
-    background: #fafafa;
+    background: var(--bg2);
   }
 
   .full {

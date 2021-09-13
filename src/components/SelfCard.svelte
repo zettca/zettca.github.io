@@ -66,7 +66,7 @@
     width: var(--image-size);
     height: var(--image-size);
     border-radius: 50%;
-    box-shadow: 1px 1px 4px #666;
+    box-shadow: 1px 1px 4px var(--shadow);
   }
 
   .separator {
@@ -78,14 +78,10 @@
   }
 
   .dots {
-    border-top: 1px dashed #999;
+    border-top: 1px dashed var(--divider);
   }
 
   .social-icons {
     height: 32px;
-  }
-
-  .social-icons .icon {
-    margin: 0 6px;
   }
 </style>

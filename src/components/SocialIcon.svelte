@@ -6,15 +6,15 @@
   export let fill;
 </script>
 
-<a href={url} class="icon-box">
+<a href={url} class="icon">
   <SVG style="fill: {fill}" src="/img/svg/{name}.svg" />
 </a>
 
 <style>
-  .icon-box {
+  .icon {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin: 0 2px;
+    margin: 0 6px;
   }
 </style>

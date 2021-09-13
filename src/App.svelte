@@ -16,13 +16,37 @@
 </main>
 
 <style>
+  :global(:root) {
+    /* LIGHT */
+    --text1: rgba(0, 0, 0, 0.87);
+    --text2: rgba(0, 0, 0, 0.54);
+    --divider: rgba(0, 0, 0, 0.12);
+
+    --bg1: #fafafa;
+    --bg2: #f0f0f0;
+    --paper: #ffffff;
+    --shadow: #666666;
+
+    /* DARK */
+    --text1: #ffffff;
+    --text2: rgba(255, 255, 255, 0.7);
+    --divider: rgba(255, 255, 255, 0.12);
+
+    --bg1: #303030;
+    --bg2: #363636;
+    --paper: #424242;
+    --shadow: #222222;
+
+    color: var(--text2);
+  }
+
   :global(.card) {
     display: inline-block;
     padding: 1rem 2rem;
     margin: 1rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--paper);
     border-radius: 2px;
-    box-shadow: 1px 1px 4px #666;
+    box-shadow: 1px 1px 4px var(--shadow);
   }
 
   .flex-element {
